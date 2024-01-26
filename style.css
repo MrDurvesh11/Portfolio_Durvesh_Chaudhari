@@ -123,7 +123,7 @@ a{
 }
 
 .hero-section-description{
-    margin: 1rem;
+    
     width: 70%;
     font-weight: 500;
 }
@@ -366,6 +366,12 @@ a{
     font-weight: 600;
     color: white;
     z-index: 10;
+    display: none;
+}
+
+.project-card:hover .project-number{
+    display: block;
+    transition: all 0.9s;
 }
 .project-number-right{
     right: -40px;
@@ -374,4 +380,157 @@ a{
 .project-number-left{
     left: -40px;
     top:-45px;
+}
+
+.project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2rem;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+    transition: all 0.4s;
+}
+
+.project-content-left{
+    left: 10%;
+}
+.project-content-right{
+    left: 40%;
+}
+
+.project-skill-container{
+    width: 60%;
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+
+}
+
+.project-skill{
+    width: 40px;
+}
+
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.project-sub-heading{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.btn-grp{
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+
+.btn-project:hover{
+    border: none;
+}
+
+.icons{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+}
+
+.icons:hover{
+    color: var(--bgOrange);
+    transition: all 0.4s;
+}
+
+.project-card:hover .project-content{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+#project-1{
+    background-image: url(./images/projects/Project1.png);
+}
+
+#project-2{
+    background-image: url(./images/projects/Project2.png);
+    margin-left: 120px;
+}
+
+#project-3{
+    background-image: url(./images/projects/Project3.png);
+}
+
+#project-4{
+    background-image: url(./images/projects/Project4.png);
+    margin-left: 120px;
+}
+
+@media (max-width:1300px)
+{
+    .page-header{
+        padding-top: 30px;
+        color: var(--bgOrange);
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .project-container{
+        padding: 5px;
+        margin: 10px;
+        gap: 60px;
+    }
+
+    .project-card{
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .project-content{
+        scale: 0.5;
+        bottom:0;
+        right: 0;
+        left: 0;
+        top: 0;
+    }
+
+    .project-content-left{
+        left: 0;
+    }
+
+    .project-heading{
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .project-sub-heading{
+        width: 100%;
+    }
+
+    #project-2{
+        margin-left: 0;
+    }
+
+    #project-4{
+        margin-left: 0;
+    }
+    .project-skill-container{
+        width: 100%;
+    }
+
+    .project-skill{
+        width: 35px;
+    }
+    .project-card:hover .project-number{
+        display: none;
+    }
+    .project-card:hover .project-content{
+        scale: 0.55;
+    }
 }
